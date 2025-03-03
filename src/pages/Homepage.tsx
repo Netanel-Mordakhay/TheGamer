@@ -1,9 +1,14 @@
+import { Stack } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
+import TopCarousel from "../components/Homepage/TopCarousel";
 
 const Homepage = () => {
   return (
     <DefaultLayout>
-      <div>Homepage</div>
+      <Stack>
+        <TopCarousel />
+        <div>Homepage</div>
+      </Stack>
     </DefaultLayout>
   );
 };
