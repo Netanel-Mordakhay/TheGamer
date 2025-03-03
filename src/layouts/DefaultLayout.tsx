@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { AppShell, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import NavBar from "../components/NavBar/NavBar";
 
 interface Props {
   children: ReactNode;
@@ -19,7 +20,9 @@ const DefaultLayout = ({ children }: Props) => {
       }}
       padding="md"
     >
-      <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
+      <AppShell.Navbar>
+        <NavBar />
+      </AppShell.Navbar>
 
       <AppShell.Main>{children}</AppShell.Main>
     </AppShell>
