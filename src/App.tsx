@@ -1,7 +1,7 @@
-import { Button } from "@mantine/core";
+import Homepage from "./pages/Homepage";
 
 const App = () => {
-  return <Button variant="filled">Button</Button>;
+  return <Homepage />;
 };
 
 export default App;
