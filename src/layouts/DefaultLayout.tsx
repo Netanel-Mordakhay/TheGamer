@@ -11,7 +11,7 @@ const DefaultLayout = ({ children }: Props) => {
 
   return (
     <AppShell
-      header={{ height: 60 }}
+      //header={{ height: 60 }}
       navbar={{
         width: 300,
         breakpoint: "sm",
@@ -19,11 +19,6 @@ const DefaultLayout = ({ children }: Props) => {
       }}
       padding="md"
     >
-      <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div>Logo</div>
-      </AppShell.Header>
-
       <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
 
       <AppShell.Main>{children}</AppShell.Main>
@@ -32,3 +27,10 @@ const DefaultLayout = ({ children }: Props) => {
 };
 
 export default DefaultLayout;
+
+/*
+<AppShell.Header>
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+        <div>Logo</div>
+      </AppShell.Header>
+*/
