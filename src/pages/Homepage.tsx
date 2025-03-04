@@ -1,9 +1,10 @@
-import { Button, Stack } from "@mantine/core";
+import { Button, SimpleGrid, Stack } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
 import TopCarousel from "../components/Homepage/TopCarousel";
 import TwoColumns from "../layouts/TwoColumns";
 import ArticleCard from "../components/Homepage/ArticleCard";
 import LatestReviews from "../components/Homepage/LatestReviews";
+import HotArticleCard from "../components/Homepage/HotArticleCard";
 
 const Homepage = () => {
   return (
@@ -25,7 +26,10 @@ const Homepage = () => {
               More...
             </Button>
           </Stack>
-          <LatestReviews />
+          <Stack>
+            <LatestReviews />
+            <HotArticleCard />
+          </Stack>
         </TwoColumns>
       </Stack>
     </DefaultLayout>

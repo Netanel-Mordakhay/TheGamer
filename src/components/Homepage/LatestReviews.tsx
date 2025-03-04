@@ -9,7 +9,7 @@ import {
   Button,
 } from "@mantine/core";
 import reviewArticles from "../../mock/reviewArticles";
-import classes from "../../styles/reviewArticles.module.css";
+import classes from "../../styles/LatestReviews.module.css";
 
 const LatestReviews = () => (
   <>

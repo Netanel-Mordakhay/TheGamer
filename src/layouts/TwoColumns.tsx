@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mantine/core";
+import { Grid, Center } from "@mantine/core";
 import React from "react";
 import { ReactNode } from "react";
 
@@ -12,12 +12,12 @@ const TwoColumns = ({ children }: Props) => {
     .slice(0, 2);
 
   return (
-    <Container size="xl" px={20}>
-      <Grid grow justify="center" align="flex-start">
+    <Center>
+      <Grid grow justify="center" align="flex-start" w={1200}>
         <Grid.Col span={8}>{child1}</Grid.Col>
         <Grid.Col span={4}>{child2}</Grid.Col>
       </Grid>
-    </Container>
+    </Center>
   );
 };
 
