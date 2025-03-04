@@ -68,6 +68,7 @@ const TopCarousel = () => {
                     variant="gradient"
                     gradient={{ from: "orange", to: "yellow", deg: 90 }}
                     maw={150}
+                    radius="lg"
                   >
                     Read more
                   </Button>

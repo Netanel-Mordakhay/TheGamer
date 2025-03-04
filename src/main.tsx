@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/carousel/styles.css";
 import "@mantine/core/styles.css";
+import "./index.css";
 
 const theme = createTheme({
   primaryColor: "orange",
