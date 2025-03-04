@@ -57,7 +57,13 @@ const TopCarousel = () => {
               <BackgroundImage
                 src={featuredArticle.imageURL}
                 h={450}
-                radius="xl"
+                style={{
+                  borderTopRightRadius: "20px",
+                  borderBottomRightRadius: "20px",
+                  borderTopLeftRadius: "0",
+                  borderBottomLeftRadius: "0",
+                  overflow: "hidden", // מונע בעיות חיתוך
+                }}
               >
                 <Box className={classes.textBox}>
                   <div>
