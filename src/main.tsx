@@ -12,8 +12,8 @@ const theme = createTheme({
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ColorSchemeScript forceColorScheme="dark" />
-    <MantineProvider theme={theme} forceColorScheme="dark">
+    <ColorSchemeScript forceColorScheme="light" />
+    <MantineProvider theme={theme} forceColorScheme="light">
       <App />
     </MantineProvider>
   </StrictMode>

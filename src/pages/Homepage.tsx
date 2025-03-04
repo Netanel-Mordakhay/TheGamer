@@ -1,8 +1,9 @@
-import { Stack } from "@mantine/core";
+import { Button, Stack } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
 import TopCarousel from "../components/Homepage/TopCarousel";
 import TwoColumns from "../layouts/TwoColumns";
 import ArticleCard from "../components/Homepage/ArticleCard";
+import LatestReviews from "../components/Homepage/LatestReviews";
 
 const Homepage = () => {
   return (
@@ -17,12 +18,14 @@ const Homepage = () => {
             <ArticleCard />
             <ArticleCard />
             <ArticleCard />
+            <Button
+              variant="gradient"
+              gradient={{ from: "orange", to: "yellow", deg: 90 }}
+            >
+              More...
+            </Button>
           </Stack>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            temporibus eum ex reiciendis quis ab tenetur, deserunt minus illum
-            exercitationem.
-          </div>
+          <LatestReviews />
         </TwoColumns>
       </Stack>
     </DefaultLayout>

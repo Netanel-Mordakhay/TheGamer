@@ -12,14 +12,10 @@ const TwoColumns = ({ children }: Props) => {
     .slice(0, 2);
 
   return (
-    <Container size="xl" px={20} py={10}>
+    <Container size="xl" px={20}>
       <Grid grow justify="center" align="flex-start">
-        <Grid.Col span={8} mih={100}>
-          {child1}
-        </Grid.Col>
-        <Grid.Col span={4} mih={100}>
-          {child2}
-        </Grid.Col>
+        <Grid.Col span={8}>{child1}</Grid.Col>
+        <Grid.Col span={4}>{child2}</Grid.Col>
       </Grid>
     </Container>
   );
