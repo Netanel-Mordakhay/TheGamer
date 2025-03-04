@@ -1,5 +1,5 @@
 .textBox {
-  position: fixed;
+  position: relative;
   width: 30%;
   height: 100%;
   background-color: rgba(30, 30, 30, 0.5);
@@ -32,10 +32,6 @@
 .thumbnail {
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
-}
-
-.currentThumbnail {
-  opacity: 1;
 }
 
 .thumbnail:hover {

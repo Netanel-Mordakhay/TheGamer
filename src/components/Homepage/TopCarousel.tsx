@@ -35,6 +35,7 @@ const TopCarousel = () => {
             w={140}
             onClick={() => handleThumbnailClick(index)}
             style={{ cursor: "pointer" }}
+            radius="sm"
           />
         ))}
       </Stack>
@@ -53,13 +54,23 @@ const TopCarousel = () => {
         {featuredArticles.map((featuredArticle) => (
           <Carousel.Slide key={featuredArticle.id}>
             <Box className={classes.featuredArticle}>
-              <BackgroundImage src={featuredArticle.imageURL} h={450}>
+              <BackgroundImage
+                src={featuredArticle.imageURL}
+                h={450}
+                radius="xl"
+              >
                 <Box className={classes.textBox}>
                   <div>
                     <Title>{featuredArticle.title}</Title>
                     <Text>{featuredArticle.description}</Text>
                   </div>
-                  <Button>Read more...</Button>
+                  <Button
+                    variant="gradient"
+                    gradient={{ from: "orange", to: "yellow", deg: 90 }}
+                    maw={150}
+                  >
+                    Read more
+                  </Button>
                 </Box>
               </BackgroundImage>
             </Box>

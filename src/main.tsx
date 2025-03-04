@@ -6,7 +6,7 @@ import "@mantine/carousel/styles.css";
 import "@mantine/core/styles.css";
 
 const theme = createTheme({
-  /** Put your mantine theme override here */
+  primaryColor: "orange",
 });
 
 createRoot(document.getElementById("root")!).render(

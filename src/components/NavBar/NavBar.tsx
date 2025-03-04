@@ -12,6 +12,7 @@ import {
 import { Group, Image, Text } from "@mantine/core";
 import classes from "../../styles/NavBar.module.css";
 import logo from "../../assets/logo.png";
+import SearchField from "./SearchField";
 
 const data = [
   { link: "", label: "Homepage", icon: IconHome },
@@ -47,6 +48,7 @@ const NavBar = () => {
         <Group className={classes.header} justify="center">
           <Image src={logo} w={240} />
         </Group>
+        <SearchField />
         {links}
       </div>
 
