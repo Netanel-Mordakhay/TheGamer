@@ -26,9 +26,9 @@ const HotArticleCard = () => {
 
   return (
     <Card withBorder radius="sm" className={classes.card}>
-      <Card.Section>
+      <Card.Section mb={10}>
         <a {...linkProps}>
-          <Image src="https://i.imgur.com/Cij5vdL.png" height={210} />
+          <Image src="https://i.imgur.com/Cij5vdL.png" height={220} />
         </a>
       </Card.Section>
 
@@ -44,17 +44,14 @@ const HotArticleCard = () => {
         Resident Evil Village review
       </Text>
 
-      <Text fz="sm" c="dimmed" lineClamp={4}>
+      <Text fz="sm" c="dimmed" lineClamp={3}>
         Resident Evil Village is a direct sequel to 2017’s Resident Evil 7, but
-        takes a very different direction to its predecessor, namely the fact
-        that this time round instead of fighting against various mutated
-        zombies, you’re now dealing with more occult enemies like werewolves and
-        vampires.
+        takes a very different direction to its predecessor.
       </Text>
 
       <Group justify="space-between" className={classes.footer}>
         <Center>
-          <Text fz="sm" inline>
+          <Text fz="xs" inline>
             Netanel Mordakhay
           </Text>
         </Center>

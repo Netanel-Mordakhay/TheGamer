@@ -16,7 +16,7 @@ const DefaultLayout = ({ children }: Props) => {
       //header={{ height: 60 }}
       navbar={{
         width: 300,
-        breakpoint: "sm",
+        breakpoint: "lg",
         collapsed: { mobile: !opened },
       }}
       padding="md"
