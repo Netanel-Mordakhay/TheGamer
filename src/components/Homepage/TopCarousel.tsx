@@ -48,6 +48,7 @@ const TopCarousel = () => {
         loop
         withControls={false}
         getEmblaApi={setEmbla}
+        w="100%"
       >
         {featuredArticles.map((featuredArticle) => (
           <Carousel.Slide key={featuredArticle.id}>

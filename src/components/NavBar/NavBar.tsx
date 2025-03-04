@@ -9,7 +9,7 @@ import {
   IconStar,
   IconSwitchHorizontal,
 } from "@tabler/icons-react";
-import { Group, Image } from "@mantine/core";
+import { Group, Image, Text } from "@mantine/core";
 import classes from "../../styles/NavBar.module.css";
 import logo from "../../assets/logo.png";
 
@@ -68,6 +68,9 @@ const NavBar = () => {
           <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
         </a>
+        <Text size="sm" c="gray" ta="center">
+          TheGamer 2025
+        </Text>
       </div>
     </nav>
   );
