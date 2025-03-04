@@ -13,7 +13,15 @@ const TwoColumns = ({ children }: Props) => {
 
   return (
     <Center>
-      <Grid grow justify="center" align="flex-start" w={1200}>
+      <Grid
+        grow
+        justify="center"
+        align="flex-start"
+        w={1200}
+        px={10}
+        py={20}
+        my={-16}
+      >
         <Grid.Col span={8}>{child1}</Grid.Col>
         <Grid.Col span={4}>{child2}</Grid.Col>
       </Grid>

@@ -1,10 +1,11 @@
-import { Button, SimpleGrid, Stack } from "@mantine/core";
+import { Button, Divider, SimpleGrid, Stack } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
 import TopCarousel from "../components/Homepage/TopCarousel";
 import TwoColumns from "../layouts/TwoColumns";
 import ArticleCard from "../components/Homepage/ArticleCard";
 import LatestReviews from "../components/Homepage/LatestReviews";
 import HotArticleCard from "../components/Homepage/HotArticleCard";
+import TopArticleCard from "../components/Homepage/TopArticleCard";
 
 const Homepage = () => {
   return (
@@ -13,6 +14,14 @@ const Homepage = () => {
         <TopCarousel />
         <TwoColumns>
           <Stack>
+            <SimpleGrid cols={{ base: 1, md: 3 }}>
+              <TopArticleCard />
+              <TopArticleCard />
+              <TopArticleCard />
+            </SimpleGrid>
+            <Divider color="orange" size="sm" />
+            <ArticleCard />
+            <ArticleCard />
             <ArticleCard />
             <ArticleCard />
             <ArticleCard />
