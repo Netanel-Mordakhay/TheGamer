@@ -27,7 +27,7 @@ const TopArticleCard = () => {
       <div className={classes.content}>
         <div>
           <Text size="lg" className={classes.title} fw={500}>
-            All We Currently Know About the next Battlefield
+            All We Currently Know About the next Battlefield Game
           </Text>
 
           <Group justify="space-between" gap="xs">
