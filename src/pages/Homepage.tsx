@@ -6,6 +6,7 @@ import ArticleCard from "../components/Homepage/ArticleCard";
 import LatestReviews from "../components/Homepage/LatestReviews";
 import HotArticleCard from "../components/Homepage/HotArticleCard";
 import TopArticleCard from "../components/Homepage/TopArticleCard";
+import LatestComments from "../components/Homepage/LatestComments";
 
 const Homepage = () => {
   return (
@@ -38,6 +39,7 @@ const Homepage = () => {
           <Stack>
             <LatestReviews />
             <HotArticleCard />
+            <LatestComments />
           </Stack>
         </TwoColumns>
       </Stack>
