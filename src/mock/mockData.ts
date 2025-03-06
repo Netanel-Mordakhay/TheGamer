@@ -1,8 +1,23 @@
+import halo900x600 from "../mock/articles/halo900x600.jpg";
+import eldenring900x600 from "../mock/articles/eldenring900x600.jpg";
+import gow900x600 from "../mock/articles/gow900x600.jpg";
+import cyberpunk900x600 from "../mock/articles/cyberpunk900x600.jpg";
+import starfield900x600 from "../mock/articles/starfield900x600.jpg";
+import indie900x600 from "../mock/articles/indiegames900x600.jpg";
+import gtavi900x600 from "../mock/articles/gtavi900x600.jpg";
+import ai900x600 from "../mock/articles/AIgaming900x600.jpg";
+import horizonzerodawn900x600 from "../mock/articles/horizonzerodawn900x600.jpg";
+import codblackops900x600 from "../mock/articles/codblackops6900x600.jpg";
 import valorant900x600 from "../mock/articles/valorant900x600.jpg";
 import esports900x600 from "../mock/articles/esports900x600.jpg";
 import nintendo900x600 from "../mock/articles/nintendoswitch2900x600.jpg";
 import psvr900x600 from "../mock/articles/psvr900x600.jpg";
 import pse900x600 from "../mock/articles/psexclusive900x600.jpg";
+import keyboards900x600 from "../mock/articles/gamingkeyboard900x600.jpg";
+import gamingpc900x600 from "../mock/articles/gamingpc900x600.jpg";
+import rdr2900x600 from "../mock/articles/rdr2900x600.jpg";
+import gamingchairs900x600 from "../mock/articles/gamingchairs900x600.jpg";
+import anticipated2025games900x600 from "../mock/articles/acshadows900x600.jpg";
 
 export interface Article {
   id: number;
@@ -82,7 +97,7 @@ const articles: Article[] = [
     id: 1,
     title: "Halo Infinite Review",
     description: "Deep dive into Halo Infinite gameplay.",
-    imageURL: "https://halo.com/review.jpg",
+    imageURL: halo900x600,
     review: true,
     rating: 8,
     featured: false,
@@ -93,7 +108,7 @@ const articles: Article[] = [
     id: 2,
     title: "Elden Ring Review",
     description: "Elden Ring redefines the open-world RPG genre.",
-    imageURL: "https://eldenring.com/review.jpg",
+    imageURL: eldenring900x600,
     review: true,
     rating: 9,
     featured: false,
@@ -104,7 +119,7 @@ const articles: Article[] = [
     id: 3,
     title: "God of War Ragnarok Review",
     description: "Kratos returns in an epic Norse adventure.",
-    imageURL: "https://godofwar.com/review.jpg",
+    imageURL: gow900x600,
     review: true,
     rating: 10,
     featured: false,
@@ -115,7 +130,7 @@ const articles: Article[] = [
     id: 4,
     title: "Cyberpunk 2077 Phantom Liberty Review",
     description: "Does the DLC redeem Cyberpunk 2077?",
-    imageURL: "https://cyberpunk.com/review.jpg",
+    imageURL: cyberpunk900x600,
     review: true,
     rating: 7,
     featured: false,
@@ -126,7 +141,7 @@ const articles: Article[] = [
     id: 5,
     title: "Starfield Review",
     description: "Is Starfield the space RPG we've been waiting for?",
-    imageURL: "https://starfield.com/review.jpg",
+    imageURL: starfield900x600,
     review: true,
     rating: 6,
     featured: false,
@@ -139,7 +154,7 @@ const articles: Article[] = [
     id: 6,
     title: "Top 10 Indie Games of 2025",
     description: "A curated list of must-play indie gems.",
-    imageURL: "https://indiegames.com/top10.jpg",
+    imageURL: indie900x600,
     review: false,
     rating: null,
     featured: true,
@@ -150,7 +165,7 @@ const articles: Article[] = [
     id: 7,
     title: "GTA VI Release Date Confirmed",
     description: "Rockstar finally confirms the highly anticipated sequel.",
-    imageURL: "https://gta.com/news.jpg",
+    imageURL: gtavi900x600,
     review: false,
     rating: null,
     featured: true,
@@ -161,7 +176,7 @@ const articles: Article[] = [
     id: 8,
     title: "AI in Game Development",
     description: "How AI is changing the future of gaming.",
-    imageURL: "https://ai.com/gaming.jpg",
+    imageURL: ai900x600,
     review: false,
     rating: null,
     featured: true,
@@ -172,7 +187,7 @@ const articles: Article[] = [
     id: 9,
     title: "Horizon Forbidden West DLC Announced",
     description: "Guerrilla Games teases new adventures.",
-    imageURL: "https://horizon.com/dlc.jpg",
+    imageURL: horizonzerodawn900x600,
     review: false,
     rating: null,
     featured: true,
@@ -183,7 +198,7 @@ const articles: Article[] = [
     id: 10,
     title: "Call of Duty 2025 Leaks",
     description: "Everything we know so far about the next COD.",
-    imageURL: "https://cod.com/leaks.jpg",
+    imageURL: codblackops900x600,
     review: false,
     rating: null,
     featured: true,
@@ -253,7 +268,7 @@ const articles: Article[] = [
     id: 16,
     title: "Best Gaming Keyboards in 2025",
     description: "A roundup of the best mechanical keyboards.",
-    imageURL: "https://hardware.com/keyboards.jpg",
+    imageURL: keyboards900x600,
     review: false,
     rating: null,
     featured: false,
@@ -264,7 +279,7 @@ const articles: Article[] = [
     id: 17,
     title: "How to Build a Gaming PC",
     description: "A step-by-step guide for beginners.",
-    imageURL: "https://pcbuild.com/guide.jpg",
+    imageURL: gamingpc900x600,
     review: false,
     rating: null,
     featured: false,
@@ -275,7 +290,7 @@ const articles: Article[] = [
     id: 18,
     title: "The Evolution of Open-World Games",
     description: "How open-world design has changed over the years.",
-    imageURL: "https://openworld.com/history.jpg",
+    imageURL: rdr2900x600,
     review: false,
     rating: null,
     featured: false,
@@ -286,7 +301,7 @@ const articles: Article[] = [
     id: 19,
     title: "Gaming Chairs: Are They Worth It?",
     description: "We tested top gaming chairs so you don’t have to.",
-    imageURL: "https://chairs.com/review.jpg",
+    imageURL: gamingchairs900x600,
     review: false,
     rating: null,
     featured: false,
@@ -297,7 +312,7 @@ const articles: Article[] = [
     id: 20,
     title: "The Most Anticipated Games of 2025",
     description: "What games should you be excited for this year?",
-    imageURL: "https://games.com/anticipated.jpg",
+    imageURL: anticipated2025games900x600,
     review: false,
     rating: null,
     featured: false,

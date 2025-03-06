@@ -1,52 +1,24 @@
-import {
-  BackgroundImage,
-  Box,
-  Group,
-  Stack,
-  Title,
-  Text,
-  RingProgress,
-  Button,
-} from "@mantine/core";
-import reviewArticles from "../../mock/reviewArticles";
+import { Box, Title, Button } from "@mantine/core";
+import useArticles from "../../hooks/useArticles";
+import LatestReviewCard from "./LatestReviewCard";
 import classes from "../../styles/LatestReviews.module.css";
 
-const LatestReviews = () => (
-  <>
+const LatestReviews = () => {
+  const { reviews } = useArticles();
+  const latestReviews = reviews.slice(-5).reverse();
+
+  return (
     <Box p={10} bg="dark" className={classes.latestReviews}>
       <Title size="xl" c="gray" mb={10}>
         Latest Reviews
       </Title>
-      {reviewArticles.map((reviewArticle) => (
-        <Box key={reviewArticle.id}>
-          <BackgroundImage src={reviewArticle.imageURL}>
-            <Box className={classes.reviewBox}>
-              <Group
-                justify="space-between"
-                wrap="nowrap"
-                p={10}
-                className={classes.gameReviewBox}
-              >
-                <Stack justify="flex-end" h={100} gap={0}>
-                  <Title size={16}>{reviewArticle.title}</Title>
-                  <Text size="xs" opacity={0.8}>
-                    Feb 6th
-                  </Text>
-                </Stack>
-                <RingProgress
-                  size={60}
-                  thickness={5}
-                  sections={[{ value: 80, color: "orange" }]}
-                  label={
-                    <Text fw={700} ta="center" size="xs">
-                      80%
-                    </Text>
-                  }
-                />
-              </Group>
-            </Box>
-          </BackgroundImage>
-        </Box>
+      {latestReviews.map((reviewArticle) => (
+        <LatestReviewCard
+          key={reviewArticle.id}
+          title={reviewArticle.title}
+          imageURL={reviewArticle.imageURL}
+          rating={reviewArticle.rating}
+        />
       ))}
       <Button
         mt={10}
@@ -57,7 +29,7 @@ const LatestReviews = () => (
         All Reviews
       </Button>
     </Box>
-  </>
-);
+  );
+};
 
 export default LatestReviews;
