@@ -4,18 +4,19 @@ import {
   Divider,
   Group,
   Paper,
+  Space,
   Text,
   Title,
   TypographyStylesProvider,
 } from "@mantine/core";
 import classes from "../../styles/LatestComments.module.css";
+import SectionHeader from "../Globals/SectionHeader";
 
 const LatestComments = () => {
   return (
     <Paper withBorder radius="sm" p="lg">
-      <Title size="xl" c="gray" mb={10}>
-        Latest Comments
-      </Title>
+      <SectionHeader title="Latest Reviews" />
+      <Space h="md" />
       {/* This duplication is currently very stupid, but I just want to see how it'll look */}
       <Group>
         <Avatar

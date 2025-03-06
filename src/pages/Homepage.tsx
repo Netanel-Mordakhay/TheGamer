@@ -7,6 +7,7 @@ import HotArticleCard from "../components/Homepage/HotArticleCard";
 import LatestComments from "../components/Homepage/LatestComments";
 import TopArticles from "../components/Homepage/TopArticles";
 import Articles from "../components/Homepage/Articles";
+import SectionHeader from "../components/Globals/SectionHeader";
 
 const Homepage = () => {
   return (
@@ -16,7 +17,7 @@ const Homepage = () => {
         <TwoColumns>
           <Stack>
             <TopArticles />
-            <Divider color="orange" size="sm" />
+            <SectionHeader title="News" />
             <Articles />
             <Button
               variant="gradient"
