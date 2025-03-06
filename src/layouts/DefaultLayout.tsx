@@ -13,7 +13,6 @@ const DefaultLayout = ({ children }: Props) => {
 
   return (
     <AppShell
-      //header={{ height: 60 }}
       navbar={{
         width: 300,
         breakpoint: "lg",
@@ -22,11 +21,13 @@ const DefaultLayout = ({ children }: Props) => {
       padding="md"
     >
       <AppShell.Navbar>
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
         <NavBar />
       </AppShell.Navbar>
 
       <AppShell.Main>
         <Stack>
+          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
           {children} <Footer />
         </Stack>
       </AppShell.Main>
