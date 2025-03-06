@@ -1,6 +1,7 @@
 import { Grid, Center } from "@mantine/core";
 import React from "react";
 import { ReactNode } from "react";
+import classes from "../styles/TwoColumns.module.css";
 
 interface Props {
   children: ReactNode;
@@ -21,6 +22,7 @@ const TwoColumns = ({ children }: Props) => {
         px={10}
         py={20}
         my={-16}
+        className={classes.container}
       >
         <Grid.Col span={8}>{child1}</Grid.Col>
         <Grid.Col span={4}>{child2}</Grid.Col>
