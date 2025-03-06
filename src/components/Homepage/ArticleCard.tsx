@@ -2,29 +2,33 @@ import { Avatar, Card, Group, Image, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks"; // כדי לזהות גודל מסך
 import classes from "../../styles/ArticleCard.module.css";
 
-const ArticleCard = () => {
+interface Props {
+  title: string;
+  description: string;
+  author: string | undefined;
+  imageURL: string;
+}
+
+const ArticleCard = ({ title, description, author, imageURL }: Props) => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)"); // מסכים קטנים
 
   return (
     <Card withBorder radius="xs" p={0} className={classes.card}>
       {isSmallScreen ? (
         <Stack gap="sm">
-          <Image
-            src="https://demo.codevibrant.com/child-theme/gaming-mag/wp-content/uploads/sites/11/2018/11/call-of-duty-700x441.jpg"
-            mah={200}
-          />
+          <Image src={imageURL} mah={200} />
           <div className={classes.body}>
             <Text tt="uppercase" c="dimmed" fw={700} size="xs">
               - news
             </Text>
             <Text className={classes.title} mt="xs" mb="md" size="xl" fw={700}>
-              Should You Play Skyrim in 2025?
+              {title}
             </Text>
             <Text className={classes.description} mt="xs" mb="md">
-              The game that has been with us longer than life itself.
+              {description}
             </Text>
             <Group gap="xs" wrap="nowrap">
-              <Text size="xs">Netanel Mordakhay</Text>
+              <Text size="xs">{author}</Text>
               <Text size="xs" c="dimmed">
                 •
               </Text>
@@ -42,22 +46,24 @@ const ArticleCard = () => {
         </Stack>
       ) : (
         <Group wrap="nowrap" gap={15}>
-          <Image
-            src="https://demo.codevibrant.com/child-theme/gaming-mag/wp-content/uploads/sites/11/2018/11/call-of-duty-700x441.jpg"
-            h={170}
-          />
-          <div className={classes.body}>
-            <Text tt="uppercase" c="dimmed" fw={700} size="xs">
-              - news
-            </Text>
-            <Text className={classes.title} mt="xs" mb="md" size="xl" fw={700}>
-              Should You Play Skyrim in 2025?
-            </Text>
-            <Text className={classes.description} mt="xs" mb="md">
-              The game that has been with us longer than life itself.
-            </Text>
+          <Image src={imageURL} h={170} />
+          <Stack
+            className={classes.body}
+            gap={0}
+            justify="space-between"
+            mih={130}
+          >
+            <div>
+              <Text tt="uppercase" c="dimmed" fw={700} size="xs">
+                - news
+              </Text>
+              <Text size="xl" fw={700}>
+                {title}
+              </Text>
+              <Text lineClamp={2}>{description}</Text>
+            </div>
             <Group gap="xs" wrap="nowrap">
-              <Text size="xs">Netanel Mordakhay</Text>
+              <Text size="xs">{author}</Text>
               <Text size="xs" c="dimmed">
                 •
               </Text>
@@ -71,7 +77,7 @@ const ArticleCard = () => {
                 3 Comments
               </Text>
             </Group>
-          </div>
+          </Stack>
         </Group>
       )}
     </Card>
