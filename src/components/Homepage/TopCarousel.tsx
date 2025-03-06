@@ -11,11 +11,13 @@ import {
 import { Carousel } from "@mantine/carousel";
 import { useState } from "react";
 import { EmblaCarouselType } from "embla-carousel";
-import featuredArticles from "../../mock/featuredArticles";
+import useArticles from "../../hooks/useArticles";
 import classes from "../../styles/TopCarousel.module.css";
 
 const TopCarousel = () => {
   const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
+  const { featured } = useArticles();
+  const latestFeaturedReviews = featured.slice(-5).reverse();
 
   const handleThumbnailClick = (index: number) => {
     if (embla) {
@@ -24,18 +26,18 @@ const TopCarousel = () => {
   };
 
   return (
-    <Group justify="center" wrap="nowrap">
+    <Group justify="center" wrap="nowrap" bg="black" p={20} mt={-16} mx={-16}>
       {/* Thumbnails */}
-      <Stack align="stretch" justify="space-between" gap="md" h={450}>
-        {featuredArticles.map((featuredArticle, index) => (
+      <Stack align="stretch" justify="space-between" gap="xs" h={450}>
+        {latestFeaturedReviews.map((featuredArticle, index) => (
           <Image
             className={classes.thumbnail}
             key={featuredArticle.id}
             src={featuredArticle.imageURL}
-            w={140}
+            w={120}
             onClick={() => handleThumbnailClick(index)}
             style={{ cursor: "pointer" }}
-            radius="sm"
+            radius="xs"
           />
         ))}
       </Stack>
@@ -51,7 +53,7 @@ const TopCarousel = () => {
         getEmblaApi={setEmbla}
         w="100%"
       >
-        {featuredArticles.map((featuredArticle) => (
+        {latestFeaturedReviews.map((featuredArticle) => (
           <Carousel.Slide key={featuredArticle.id}>
             <Box className={classes.featuredArticle}>
               <BackgroundImage
@@ -62,7 +64,7 @@ const TopCarousel = () => {
                   borderBottomRightRadius: "20px",
                   borderTopLeftRadius: "0",
                   borderBottomLeftRadius: "0",
-                  overflow: "hidden", // מונע בעיות חיתוך
+                  overflow: "hidden",
                 }}
               >
                 <Box className={classes.textBox}>
