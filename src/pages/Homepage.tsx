@@ -7,6 +7,7 @@ import LatestReviews from "../components/Homepage/LatestReviews";
 import HotArticleCard from "../components/Homepage/HotArticleCard";
 import TopArticleCard from "../components/Homepage/TopArticleCard";
 import LatestComments from "../components/Homepage/LatestComments";
+import TopArticles from "../components/Homepage/TopArticles";
 
 const Homepage = () => {
   return (
@@ -15,11 +16,7 @@ const Homepage = () => {
         <TopCarousel />
         <TwoColumns>
           <Stack>
-            <SimpleGrid cols={{ base: 1, md: 3 }}>
-              <TopArticleCard />
-              <TopArticleCard />
-              <TopArticleCard />
-            </SimpleGrid>
+            <TopArticles />
             <Divider color="orange" size="sm" />
             <ArticleCard />
             <ArticleCard />

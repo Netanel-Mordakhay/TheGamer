@@ -1,4 +1,37 @@
-const writers = [
+import valorant900x600 from "../mock/articles/valorant900x600.jpg";
+import esports900x600 from "../mock/articles/esports900x600.jpg";
+import nintendo900x600 from "../mock/articles/nintendoswitch2900x600.jpg";
+import psvr900x600 from "../mock/articles/psvr900x600.jpg";
+import pse900x600 from "../mock/articles/psexclusive900x600.jpg";
+
+export interface Article {
+  id: number;
+  title: string;
+  description: string;
+  imageURL: string;
+  review: boolean;
+  rating: number | null;
+  featured: boolean;
+  topArticle: boolean;
+  authorId: number;
+}
+
+export interface Comment {
+  id: number;
+  articleId: number;
+  user: string;
+  text: string;
+  timestamp: string;
+}
+
+export interface Author {
+  id: number;
+  name: string;
+  avatar: string;
+  bio: string;
+}
+
+const authors = [
   {
     id: 1,
     name: "John Doe",
@@ -43,7 +76,7 @@ const comments = [
   },
 ];
 
-const articles = [
+const articles: Article[] = [
   // Reviews (5)
   {
     id: 1,
@@ -54,7 +87,7 @@ const articles = [
     rating: 8,
     featured: false,
     topArticle: false,
-    writerId: 1,
+    authorId: 1,
   },
   {
     id: 2,
@@ -65,7 +98,7 @@ const articles = [
     rating: 9,
     featured: false,
     topArticle: false,
-    writerId: 1,
+    authorId: 1,
   },
   {
     id: 3,
@@ -76,7 +109,7 @@ const articles = [
     rating: 10,
     featured: false,
     topArticle: false,
-    writerId: 2,
+    authorId: 2,
   },
   {
     id: 4,
@@ -87,7 +120,7 @@ const articles = [
     rating: 7,
     featured: false,
     topArticle: false,
-    writerId: 3,
+    authorId: 3,
   },
   {
     id: 5,
@@ -98,7 +131,7 @@ const articles = [
     rating: 6,
     featured: false,
     topArticle: false,
-    writerId: 3,
+    authorId: 3,
   },
 
   // Featured Articles (5)
@@ -111,7 +144,7 @@ const articles = [
     rating: null,
     featured: true,
     topArticle: false,
-    writerId: 2,
+    authorId: 2,
   },
   {
     id: 7,
@@ -122,7 +155,7 @@ const articles = [
     rating: null,
     featured: true,
     topArticle: false,
-    writerId: 1,
+    authorId: 1,
   },
   {
     id: 8,
@@ -133,7 +166,7 @@ const articles = [
     rating: null,
     featured: true,
     topArticle: false,
-    writerId: 3,
+    authorId: 3,
   },
   {
     id: 9,
@@ -144,7 +177,7 @@ const articles = [
     rating: null,
     featured: true,
     topArticle: false,
-    writerId: 2,
+    authorId: 2,
   },
   {
     id: 10,
@@ -155,7 +188,7 @@ const articles = [
     rating: null,
     featured: true,
     topArticle: false,
-    writerId: 1,
+    authorId: 1,
   },
 
   // Top Articles (5)
@@ -163,56 +196,56 @@ const articles = [
     id: 11,
     title: "Valorant Patch 8.01 Breakdown",
     description: "All the agent buffs and nerfs in patch 8.01.",
-    imageURL: "https://valorant.com/patch.jpg",
+    imageURL: valorant900x600,
     review: false,
     rating: null,
     featured: false,
     topArticle: true,
-    writerId: 2,
+    authorId: 2,
   },
   {
     id: 12,
     title: "The Rise of Esports in 2025",
     description: "Why competitive gaming is bigger than ever.",
-    imageURL: "https://esports.com/rise.jpg",
+    imageURL: esports900x600,
     review: false,
     rating: null,
     featured: false,
     topArticle: true,
-    writerId: 3,
+    authorId: 3,
   },
   {
     id: 13,
     title: "Nintendo Switch 2 Rumors",
     description: "Everything we know about the next-gen Switch.",
-    imageURL: "https://nintendo.com/switch2.jpg",
+    imageURL: nintendo900x600,
     review: false,
     rating: null,
     featured: false,
     topArticle: true,
-    writerId: 1,
+    authorId: 1,
   },
   {
     id: 14,
     title: "The Future of VR Gaming",
     description: "How VR is evolving in the next decade.",
-    imageURL: "https://vr.com/future.jpg",
+    imageURL: psvr900x600,
     review: false,
     rating: null,
     featured: false,
     topArticle: true,
-    writerId: 2,
+    authorId: 2,
   },
   {
     id: 15,
     title: "Upcoming PS5 Exclusives",
     description: "A list of the biggest PS5 exclusives coming soon.",
-    imageURL: "https://playstation.com/exclusives.jpg",
+    imageURL: pse900x600,
     review: false,
     rating: null,
     featured: false,
     topArticle: true,
-    writerId: 3,
+    authorId: 3,
   },
 
   // Regular Articles (5)
@@ -225,7 +258,7 @@ const articles = [
     rating: null,
     featured: false,
     topArticle: false,
-    writerId: 3,
+    authorId: 3,
   },
   {
     id: 17,
@@ -236,7 +269,7 @@ const articles = [
     rating: null,
     featured: false,
     topArticle: false,
-    writerId: 1,
+    authorId: 1,
   },
   {
     id: 18,
@@ -247,7 +280,7 @@ const articles = [
     rating: null,
     featured: false,
     topArticle: false,
-    writerId: 2,
+    authorId: 2,
   },
   {
     id: 19,
@@ -258,7 +291,7 @@ const articles = [
     rating: null,
     featured: false,
     topArticle: false,
-    writerId: 3,
+    authorId: 3,
   },
   {
     id: 20,
@@ -269,8 +302,8 @@ const articles = [
     rating: null,
     featured: false,
     topArticle: false,
-    writerId: 1,
+    authorId: 1,
   },
 ];
 
-export { articles, writers, comments };
+export { articles, authors, comments };

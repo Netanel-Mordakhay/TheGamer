@@ -1,55 +1,34 @@
-import { IconEye, IconMessageCircle } from "@tabler/icons-react";
-import { Card, Center, Group, Text, useMantineTheme } from "@mantine/core";
-import classes from "../../styles/TopArticleCard.module.css";
+import { IconMessageCircle } from "@tabler/icons-react";
+import { Group, Text, Card, Box, Stack, Title } from "@mantine/core";
 
-const TopArticleCard = () => {
-  const theme = useMantineTheme();
+interface Props {
+  title: string;
+  imageURL: string;
+  author: string;
+}
 
+const TopArticleCard = ({ title, imageURL, author }: Props) => {
   return (
-    <Card
-      p="lg"
-      shadow="lg"
-      className={classes.card}
-      radius="md"
-      component="a"
-      href="https://mantine.dev/"
-      target="_blank"
-    >
-      <div
-        className={classes.image}
-        style={{
-          backgroundImage:
-            "url(https://rukminim2.flixcart.com/image/850/1000/j81xsi80/poster/h/w/z/large-battlefield-4-china-rising-game-on-fine-art-paper-on-24x36-original-imaerxz9yzxamudh.jpeg?q=90&crop=false)",
-        }}
+    <Card shadow="md" className="upscale-container " radius="md" p={0}>
+      <Box
+        className="upscale-image"
+        style={{ backgroundImage: `url(${imageURL})` }}
       />
-      <div className={classes.overlay} />
-
-      <div className={classes.content}>
-        <div>
-          <Text size="lg" className={classes.title} fw={500}>
-            All We Currently Know About the next Battlefield Game
-          </Text>
-
-          <Group justify="space-between" gap="xs">
-            <Text size="sm" className={classes.author}>
-              Netanel Mordakhay
-            </Text>
-
-            <Group gap="lg">
-              <Center>
-                <IconMessageCircle
-                  size={16}
-                  stroke={1.5}
-                  color={theme.colors.dark[2]}
-                />
-                <Text size="sm" className={classes.bodyText}>
-                  5
-                </Text>
-              </Center>
+      <Box className="upscale-overlay" />
+      <Box className="upscale-content ">
+        <Stack gap={0} justify="flex-end" h={180}>
+          <Title size="lg" className="top-article">
+            {title}
+          </Title>
+          <Group justify="space-between" className="medium-opacity top-article">
+            <Text>{author}</Text>
+            <Group gap={5}>
+              <IconMessageCircle size={16} />
+              <Text>7</Text>
             </Group>
           </Group>
-        </div>
-      </div>
+        </Stack>
+      </Box>
     </Card>
   );
 };
