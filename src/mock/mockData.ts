@@ -18,6 +18,11 @@ import gamingpc900x600 from "../mock/articles/gamingpc900x600.jpg";
 import rdr2900x600 from "../mock/articles/rdr2900x600.jpg";
 import gamingchairs900x600 from "../mock/articles/gamingchairs900x600.jpg";
 import anticipated2025games900x600 from "../mock/articles/acshadows900x600.jpg";
+import nextgenconsoles900x600 from "../mock/articles/mobilegaming900x600.jpg";
+import mobilegaming900x600 from "../mock/articles/gamingpc900x600.jpg";
+import gamingstreaming900x600 from "../mock/articles/gamingstreaming900x600.jpg";
+import aingames900x600 from "../mock/articles/aingames900x600.jpg";
+import retrogaming900x600 from "../mock/articles/retrogaming900x600.jpg";
 
 export interface Article {
   id: number;
@@ -313,6 +318,66 @@ const articles: Article[] = [
     title: "The Most Anticipated Games of 2025",
     description: "What games should you be excited for this year?",
     imageURL: anticipated2025games900x600,
+    review: false,
+    rating: null,
+    featured: false,
+    topArticle: false,
+    authorId: 1,
+  },
+  {
+    id: 21,
+    title: "Next-Gen Console War: PlayStation 6 vs. Xbox Series Z",
+    description:
+      "A deep dive into what we know so far about the next-gen console battle.",
+    imageURL: nextgenconsoles900x600,
+    review: false,
+    rating: null,
+    featured: false,
+    topArticle: false,
+    authorId: 2,
+  },
+  {
+    id: 22,
+    title: "The Rise of Mobile Gaming in 2025",
+    description:
+      "How mobile games are becoming more advanced and rivaling console experiences.",
+    imageURL: mobilegaming900x600,
+    review: false,
+    rating: null,
+    featured: false,
+    topArticle: false,
+    authorId: 1,
+  },
+  {
+    id: 23,
+    title: "Streaming Services for Gamers: Which One is Best?",
+    description:
+      "Comparing Game Pass, PlayStation Plus, and other gaming subscriptions.",
+    imageURL: gamingstreaming900x600,
+    review: false,
+    rating: null,
+    featured: false,
+    topArticle: false,
+    authorId: 3,
+  },
+  {
+    id: 24,
+    title: "The Impact of AI on Game Development",
+    description:
+      "How artificial intelligence is shaping the future of game design.",
+    imageURL: aingames900x600,
+    review: false,
+    rating: null,
+    featured: false,
+    topArticle: false,
+    authorId: 2,
+  },
+  {
+    id: 25,
+    title: "Retro Gaming Revival: Why Old Games Are Making a Comeback",
+    description:
+      "Exploring the nostalgia-fueled return of classic video games.",
+    imageURL: retrogaming900x600,
     review: false,
     rating: null,
     featured: false,
