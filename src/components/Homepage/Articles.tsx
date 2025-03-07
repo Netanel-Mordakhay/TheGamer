@@ -19,6 +19,7 @@ const Articles = () => {
             description={article.description}
             author={author?.name}
             imageURL={article.imageURL}
+            id={article.id}
           />
         );
       })}
