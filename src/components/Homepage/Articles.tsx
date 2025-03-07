@@ -1,6 +1,6 @@
 import useArticles from "../../hooks/useArticles";
 import useAuthor from "../../hooks/useAuthors";
-import { Stack } from "@mantine/core";
+import { Button, Stack } from "@mantine/core";
 import ArticleCard from "./ArticleCard";
 
 const Articles = () => {
@@ -8,6 +8,7 @@ const Articles = () => {
 
   return (
     <Stack>
+      {/* Article's stack, mapper */}
       {news.map((article) => {
         const author = useAuthor(article.authorId);
         return (
@@ -19,6 +20,13 @@ const Articles = () => {
           />
         );
       })}
+      {/* Read more button */}
+      <Button
+        variant="gradient"
+        gradient={{ from: "orange", to: "yellow", deg: 90 }}
+      >
+        More...
+      </Button>
     </Stack>
   );
 };

@@ -1,10 +1,7 @@
-import { Button, Divider, Stack } from "@mantine/core";
+import { Button, Stack } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
 import TopCarousel from "../components/Homepage/TopCarousel";
 import TwoColumns from "../layouts/TwoColumns";
-import LatestReviews from "../components/Homepage/LatestReviews";
-import HotArticleCard from "../components/Homepage/HotArticleCard";
-import LatestComments from "../components/Homepage/LatestComments";
 import TopArticles from "../components/Homepage/TopArticles";
 import Articles from "../components/Homepage/Articles";
 import SectionHeader from "../components/Globals/SectionHeader";
@@ -16,17 +13,13 @@ const Homepage = () => {
       <Stack>
         <TopCarousel />
         <TwoColumns>
+          {/* Left column */}
           <Stack>
             <TopArticles />
             <SectionHeader title="News" />
             <Articles />
-            <Button
-              variant="gradient"
-              gradient={{ from: "orange", to: "yellow", deg: 90 }}
-            >
-              More...
-            </Button>
           </Stack>
+          {/* Right column */}
           <SidebarHomepage />
         </TwoColumns>
       </Stack>

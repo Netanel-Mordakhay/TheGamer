@@ -11,6 +11,7 @@ interface Props {
 
 const SidebarDarkBox = ({ title, buttonText, children, dark }: Props) => {
   return (
+    /* Sets box's padding & bg color based on input */
     <Box p={dark ? 10 : 0} bg={dark ? "dark" : "white"}>
       <SectionHeader title={title} />
       <Space h="md" />

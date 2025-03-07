@@ -6,10 +6,13 @@ import HotArticleCard from "./HotArticleCard";
 const SidebarHomepage = () => {
   return (
     <Stack>
+      {/* Latest reviews */}
       <SidebarBox title="Latest Reviews" buttonText="All Reviews" dark={true}>
         <LatestReviews />
       </SidebarBox>
+      {/* Hot article (week's most popular) */}
       <HotArticleCard />
+      {/* Latest Comments */}
       <SidebarBox
         title="Latest Comments"
         buttonText="All Comments"
