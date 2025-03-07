@@ -98,6 +98,17 @@ body {
   );
 }
 
+/* Review page's header */
+.review-header-image-gradient {
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
 /* Animations */
 /* Upscale transformation inside a container */
 .upscale-container {
