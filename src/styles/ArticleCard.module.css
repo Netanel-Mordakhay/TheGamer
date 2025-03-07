@@ -1,8 +1,0 @@
-.card {
-  background-color: var(--mantine-color-body);
-  transition: border-color 0.3s ease-in-out;
-}
-
-.card:hover {
-  border-color: var(--mantine-primary-color-filled-hover);
-}

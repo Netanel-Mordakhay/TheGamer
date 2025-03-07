@@ -16,7 +16,6 @@ const Homepage = () => {
           {/* Left column */}
           <Stack>
             <TopArticles />
-            <SectionHeader title="News" />
             <Articles />
           </Stack>
           {/* Right column */}

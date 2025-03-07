@@ -1,6 +1,5 @@
 import { Box, Card, Group, Image, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import classes from "../../styles/ArticleCard.module.css";
 
 interface Props {
   title: string;
@@ -13,18 +12,18 @@ const ArticleCard = ({ title, description, author, imageURL }: Props) => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
-    <Card withBorder radius="xs" p={0} className={classes.card}>
+    <Card withBorder radius="xs" p={0} className="article-card">
       {isSmallScreen ? (
         <Stack gap="sm">
           <Image src={imageURL} mah={200} />
-          <Box className={classes.body} px={10} pb={10}>
+          <Box px={10} pb={10}>
             <Text tt="uppercase" c="dimmed" fw={700} size="xs">
               - news
             </Text>
-            <Text className={classes.title} mt="xs" mb="md" size="xl" fw={700}>
+            <Text mt="xs" mb="md" size="xl" fw={700}>
               {title}
             </Text>
-            <Text className={classes.description} mt="xs" mb="md">
+            <Text mt="xs" mb="md">
               {description}
             </Text>
             <Group gap="xs" wrap="nowrap">
@@ -47,12 +46,7 @@ const ArticleCard = ({ title, description, author, imageURL }: Props) => {
       ) : (
         <Group wrap="nowrap" gap={15}>
           <Image src={imageURL} h={170} />
-          <Stack
-            className={classes.body}
-            gap={0}
-            justify="space-between"
-            mih={130}
-          >
+          <Stack gap={0} justify="space-between" mih={130}>
             <div>
               <Text tt="uppercase" c="dimmed" fw={700} size="xs">
                 - news

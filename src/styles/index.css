@@ -2,17 +2,38 @@ body {
   background-color: var(--mantine-color-gray-0);
 }
 
+/* Layouts */
+.layouts-default-container {
+  background-color: var(--mantine-color-white);
+  border-left: 1px solid var(--mantine-color-gray-3);
+  border-right: 1px solid var(--mantine-color-gray-3);
+}
+
 /* Typography */
 .top-article {
   color: var(--mantine-color-gray-3);
 }
 
-/* Sidebars */
-/* Review Cards */
-.latestReviews {
-  border-radius: 2px;
+/* Cards */
+/* Article Cards */
+.article-card {
+  background-color: var(--mantine-color-body);
+  transition: border-color 0.3s ease-in-out;
 }
 
+.article-card:hover {
+  border-color: var(--mantine-primary-color-filled-hover);
+}
+
+/* Hot Atricle Cards */
+.hot-article-rating {
+  position: absolute;
+  top: var(--mantine-spacing-xs);
+  left: 12px;
+  pointer-events: none;
+}
+/* Sidebars */
+/* Latest Reviews */
 .reviewBox {
   background: rgb(0, 0, 0);
   background: linear-gradient(
