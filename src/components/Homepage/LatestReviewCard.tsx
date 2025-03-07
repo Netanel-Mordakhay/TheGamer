@@ -7,7 +7,6 @@ import {
   RingProgress,
   Text,
 } from "@mantine/core";
-import classes from "../../styles/LatestReviews.module.css";
 
 interface Props {
   title: string;
@@ -19,12 +18,12 @@ const LatestReviewCard = ({ title, imageURL, rating }: Props) => {
   return (
     <Box>
       <BackgroundImage src={imageURL}>
-        <Box className={classes.reviewBox}>
+        <Box className="reviewBox">
           <Group
             justify="space-between"
             wrap="nowrap"
             p={10}
-            className={classes.gameReviewBox}
+            className="gameReviewBox"
           >
             <Stack justify="flex-end" h={100} gap={0}>
               <Title size={16}>{title}</Title>

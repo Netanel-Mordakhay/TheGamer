@@ -8,6 +8,7 @@ import LatestComments from "../components/Homepage/LatestComments";
 import TopArticles from "../components/Homepage/TopArticles";
 import Articles from "../components/Homepage/Articles";
 import SectionHeader from "../components/Globals/SectionHeader";
+import SidebarHomepage from "../components/Homepage/SidebarHomepage";
 
 const Homepage = () => {
   return (
@@ -26,11 +27,7 @@ const Homepage = () => {
               More...
             </Button>
           </Stack>
-          <Stack>
-            <LatestReviews />
-            <HotArticleCard />
-            <LatestComments />
-          </Stack>
+          <SidebarHomepage />
         </TwoColumns>
       </Stack>
     </DefaultLayout>

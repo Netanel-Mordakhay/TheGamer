@@ -1,5 +1,5 @@
-import { Avatar, Card, Group, Image, Stack, Text } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks"; // כדי לזהות גודל מסך
+import { Box, Card, Group, Image, Stack, Text } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import classes from "../../styles/ArticleCard.module.css";
 
 interface Props {
@@ -10,14 +10,14 @@ interface Props {
 }
 
 const ArticleCard = ({ title, description, author, imageURL }: Props) => {
-  const isSmallScreen = useMediaQuery("(max-width: 768px)"); // מסכים קטנים
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
     <Card withBorder radius="xs" p={0} className={classes.card}>
       {isSmallScreen ? (
         <Stack gap="sm">
           <Image src={imageURL} mah={200} />
-          <div className={classes.body}>
+          <Box className={classes.body} px={10} pb={10}>
             <Text tt="uppercase" c="dimmed" fw={700} size="xs">
               - news
             </Text>
@@ -42,7 +42,7 @@ const ArticleCard = ({ title, description, author, imageURL }: Props) => {
                 3 Comments
               </Text>
             </Group>
-          </div>
+          </Box>
         </Stack>
       ) : (
         <Group wrap="nowrap" gap={15}>
