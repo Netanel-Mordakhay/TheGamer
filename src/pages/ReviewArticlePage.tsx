@@ -2,8 +2,6 @@ import { useParams } from "react-router-dom";
 import useArticles from "../hooks/useArticles";
 import { Title, Text, Image, Stack } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
-import SidebarHomepage from "../components/Homepage/SidebarHomepage";
-import TwoColumns from "../layouts/TwoColumns";
 import OneColumn from "../layouts/OneColumn";
 
 const ReviewArticlePage = () => {

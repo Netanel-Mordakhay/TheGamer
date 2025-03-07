@@ -17,10 +17,10 @@ const TopArticleCard = ({ title, imageURL, author }: Props) => {
       <Box className="upscale-overlay" />
       <Box className="upscale-content ">
         <Stack gap={0} justify="flex-end" h={180}>
-          <Title size="lg" className="top-article">
+          <Title size="lg" className="title-gray">
             {title}
           </Title>
-          <Group justify="space-between" className="medium-opacity top-article">
+          <Group justify="space-between" className="medium-opacity title-gray">
             <Text>{author}</Text>
             <Group gap={5}>
               <IconMessageCircle size={16} />
