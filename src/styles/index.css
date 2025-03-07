@@ -10,6 +10,10 @@ body {
 }
 
 /* Typography */
+.text-gray {
+  color: var(--mantine-color-gray-3);
+}
+
 .title-gray {
   color: var(--mantine-color-gray-3);
 }

@@ -25,10 +25,11 @@ const ReviewHeader = ({ title, imageURL, description }: Props) => {
           p={10}
           gap={0}
           bg="white"
-          mt={-80}
+          mt={-70}
           h="100%"
           w="80%"
           align="center"
+          style={{ borderRadius: "16px" }}
         >
           <Title>{title}</Title>
           <Group className="medium-opacity">
