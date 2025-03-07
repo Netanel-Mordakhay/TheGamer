@@ -47,7 +47,6 @@ const ReviewSummary = ({ imageURL, rating }: Props) => {
               </Text>
             }
           />
-
           {/* Pros */}
           <Stack>
             <Title>Pros</Title>
@@ -71,7 +70,6 @@ const ReviewSummary = ({ imageURL, rating }: Props) => {
               </List.Item>
             </List>
           </Stack>
-
           {/* Cons */}
           <Stack>
             <Title>Cons</Title>
