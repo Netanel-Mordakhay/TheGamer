@@ -40,6 +40,12 @@ body {
   left: 12px;
   pointer-events: none;
 }
+
+/* Comment Section */
+.comment-card {
+  background-color: var(--mantine-color-gray-0);
+}
+
 /* Sidebars */
 /* Latest Reviews */
 .reviewBox {

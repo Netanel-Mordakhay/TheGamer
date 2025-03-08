@@ -1,4 +1,12 @@
-import { BackgroundImage, Box, Title, Stack, Group, Text } from "@mantine/core";
+import {
+  BackgroundImage,
+  Box,
+  Title,
+  Stack,
+  Group,
+  Text,
+  Divider,
+} from "@mantine/core";
 
 interface Props {
   title: string;
@@ -19,8 +27,10 @@ const ArticleHeader = ({ title, imageURL, description }: Props) => {
             gap={0}
           >
             <Title>{title}</Title>
+            <Divider my={5} opacity={0.3} />
             <Group className="medium-opacity">
               <Text>Netanel Mordakhay</Text>
+              <Text>•</Text>
               <Text>Feb 6th, 2025</Text>
             </Group>
           </Stack>

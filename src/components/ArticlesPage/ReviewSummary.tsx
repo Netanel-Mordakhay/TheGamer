@@ -33,6 +33,7 @@ const ReviewSummary = ({ imageURL, rating }: Props) => {
           fw={500}
           p={20}
           gap={30}
+          wrap="nowrap"
         >
           {/* Rating ring */}
           <RingProgress
