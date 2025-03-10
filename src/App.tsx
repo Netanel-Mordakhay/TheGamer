@@ -5,6 +5,7 @@ import ReviewArticlePage from "./pages/ReviewArticlePage";
 import ArticleListPage from "./pages/ArticleListPage";
 import ScrollToTop from "./components/Globals/ScrollToTop";
 import DefaultLayout from "./layouts/DefaultLayout";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/articles/:id" element={<NewsArticlePage />} />
           <Route path="/reviews/:id" element={<ReviewArticlePage />} />
           <Route path="/" element={<Homepage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </DefaultLayout>
     </BrowserRouter>

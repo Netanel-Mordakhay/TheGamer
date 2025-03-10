@@ -7,7 +7,6 @@ import ReviewSummary from "../components/ArticlesPage/ReviewSummary";
 import ReviewShare from "../components/ArticlesPage/ReviewShare";
 import CommentSection from "../components/ArticlesPage/CommentSection";
 import useComments from "../hooks/useComments";
-import DefaultLayout from "../layouts/DefaultLayout";
 
 const ReviewArticlePage = () => {
   const { id } = useParams();

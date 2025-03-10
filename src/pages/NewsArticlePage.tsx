@@ -6,7 +6,6 @@ import SidebarHomepage from "../components/Homepage/SidebarHomepage";
 import TwoColumns from "../layouts/TwoColumns";
 import ArticleHeader from "../components/ArticlesPage/ArticleHeader";
 import CommentSection from "../components/ArticlesPage/CommentSection";
-import DefaultLayout from "../layouts/DefaultLayout";
 
 const NewsArticlePage = () => {
   const { id } = useParams();
