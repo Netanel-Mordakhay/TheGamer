@@ -12,14 +12,6 @@ const SidebarHomepage = () => {
       </SidebarBox>
       {/* Hot article (week's most popular) */}
       <HotArticleCard />
-      {/* Latest Comments */}
-      <SidebarBox
-        title="Latest Comments"
-        buttonText="All Comments"
-        dark={false}
-      >
-        asd
-      </SidebarBox>
     </Stack>
   );
 };
