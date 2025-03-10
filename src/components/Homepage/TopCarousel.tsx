@@ -14,8 +14,10 @@ import { EmblaCarouselType } from "embla-carousel";
 import useArticles from "../../hooks/useArticles";
 import classes from "../../styles/TopCarousel.module.css";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "@mantine/hooks";
 
 const TopCarousel = () => {
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
   const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
   const { featured } = useArticles();
   const latestFeatured = featured.slice(-5).reverse();
@@ -56,9 +58,22 @@ const TopCarousel = () => {
         align="start"
         slideGap="md"
         loop
+        withIndicators
         withControls={false}
         getEmblaApi={setEmbla}
         w="100%"
+        styles={
+          isSmallScreen
+            ? {
+                indicator: {
+                  width: 10,
+                  height: 10,
+                  backgroundColor: "white",
+                  transition: "background-color 150ms ease",
+                },
+              }
+            : {}
+        }
       >
         {latestFeatured.map((featuredArticle) => (
           <Carousel.Slide key={featuredArticle.id}>
@@ -85,7 +100,7 @@ const TopCarousel = () => {
                       <Title>{featuredArticle.title}</Title>
                       <Text>{featuredArticle.description}</Text>
                     </div>
-                    <Button maw={150} radius="xs">
+                    <Button maw={150} radius="xs" mb={{ base: "lg", md: 0 }}>
                       Read more
                     </Button>
                   </Box>

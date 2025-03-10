@@ -1,3 +1,14 @@
+@media (max-width: 768px) {
+}
+
+.carouselIndicator {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  transition: background-color 150ms ease;
+  z-index: 10;
+}
+
 .textBox {
   position: relative;
   width: 30%;
