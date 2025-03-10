@@ -10,8 +10,10 @@ import CommentSection from "../components/ArticlesPage/CommentSection";
 
 const NewsArticlePage = () => {
   const { id } = useParams();
-  const { news } = useArticles();
-  const article = news.find((a) => a.id === Number(id));
+  const { news, featured, topArticles } = useArticles();
+  const article = [...news, ...featured, ...topArticles].find(
+    (a) => a.id === Number(id)
+  );
 
   if (!article) {
     return <p>Article not found</p>;
