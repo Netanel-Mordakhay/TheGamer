@@ -13,7 +13,10 @@ const ArticleCard = ({ article, comments, author }: Props) => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
-    <Link to={`articles/${article.id}`} style={{ textDecoration: "none" }}>
+    <Link
+      to={`/${article.review ? "reviews" : "articles"}/${article.id}`}
+      style={{ textDecoration: "none" }}
+    >
       <Card withBorder radius="xs" p={0} className="article-card">
         {isSmallScreen ? (
           <Stack gap="sm">

@@ -1,13 +1,4 @@
-import {
-  Card,
-  Group,
-  Avatar,
-  Stack,
-  Text,
-  Input,
-  Textarea,
-  Button,
-} from "@mantine/core";
+import { Card, Stack, Input, Textarea, Button } from "@mantine/core";
 
 const CommentForm = () => {
   return (

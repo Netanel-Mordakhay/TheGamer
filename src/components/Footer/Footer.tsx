@@ -1,12 +1,4 @@
-import {
-  Box,
-  Image,
-  Divider,
-  Group,
-  List,
-  SimpleGrid,
-  Text,
-} from "@mantine/core";
+import { Box, Image, Divider, Group, List, SimpleGrid } from "@mantine/core";
 import logo from "../../assets/logo.png";
 
 const Footer = () => {

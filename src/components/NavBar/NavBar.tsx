@@ -1,75 +1,54 @@
-import { useState } from "react";
 import {
   IconHome,
   IconVideo,
   IconNews,
   IconUsers,
   IconShoppingCart,
-  IconLogout,
   IconStar,
-  IconSwitchHorizontal,
 } from "@tabler/icons-react";
 import { Group, Image, Text } from "@mantine/core";
+import { Link, useLocation } from "react-router-dom";
 import classes from "../../styles/NavBar.module.css";
 import logo from "../../assets/logo.png";
 import SearchField from "./SearchField";
 
 const data = [
-  { link: "", label: "Homepage", icon: IconHome },
-  { link: "", label: "Forums", icon: IconUsers },
-  { link: "", label: "News", icon: IconNews },
-  { link: "", label: "Reviews", icon: IconStar },
-  { link: "", label: "Video", icon: IconVideo },
-  { link: "", label: "Shop", icon: IconShoppingCart },
+  { link: "/", label: "Homepage", icon: IconHome },
+  { link: "/forums", label: "Forums", icon: IconUsers },
+  { link: "/articles", label: "News", icon: IconNews },
+  { link: "/reviews", label: "Reviews", icon: IconStar },
+  { link: "/videos", label: "Video", icon: IconVideo },
+  { link: "/shop", label: "Shop", icon: IconShoppingCart },
 ];
 
 const NavBar = () => {
-  const [active, setActive] = useState("Homepage");
+  const location = useLocation();
 
   const links = data.map((item) => (
-    <a
+    <Link
+      to={item.link}
       className={classes.link}
-      data-active={item.label === active || undefined}
-      href={item.link}
+      data-active={location.pathname === item.link || undefined}
       key={item.label}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(item.label);
-      }}
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
-    </a>
+    </Link>
   ));
 
   return (
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <Group className={classes.header} justify="center">
-          <Image src={logo} w={240} />
+          <Link to="/">
+            <Image src={logo} w={240} />
+          </Link>
         </Group>
         <SearchField />
         {links}
       </div>
 
       <div className={classes.footer}>
-        <a
-          href="#"
-          className={classes.link}
-          onClick={(event) => event.preventDefault()}
-        >
-          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
-          <span>Change account</span>
-        </a>
-
-        <a
-          href="#"
-          className={classes.link}
-          onClick={(event) => event.preventDefault()}
-        >
-          <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>Logout</span>
-        </a>
         <Text size="sm" c="gray" ta="center">
           TheGamer 2025
         </Text>

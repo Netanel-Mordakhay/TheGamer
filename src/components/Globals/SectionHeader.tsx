@@ -1,4 +1,4 @@
-import { Box, Group, Stack, Text } from "@mantine/core";
+import { Group, Stack, Text } from "@mantine/core";
 import { IconSquareArrowRight } from "@tabler/icons-react";
 
 interface Props {

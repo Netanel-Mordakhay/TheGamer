@@ -4,7 +4,6 @@ import ArticleCard from "../components/Homepage/ArticleCard";
 import SidebarHomepage from "../components/Homepage/SidebarHomepage";
 import useAuthor from "../hooks/useAuthors";
 import useComments from "../hooks/useComments";
-import DefaultLayout from "../layouts/DefaultLayout";
 import TwoColumns from "../layouts/TwoColumns";
 import useArticles from "../hooks/useArticles";
 import { useLocation } from "react-router-dom";
@@ -18,36 +17,34 @@ const ArticleListPage = () => {
     : [...news, ...featured, ...topArticles];
 
   return (
-    <DefaultLayout>
-      <TwoColumns>
-        {/* Left column */}
-        <Stack>
-          <SectionHeader title={isReviewsPage ? "Reviews" : "News"} />
-          {/* Article's stack, mapper */}
-          {articles.map((article) => {
-            const author = useAuthor(article.authorId);
-            const comments = useComments(article.id);
-            return (
-              <ArticleCard
-                key={article.id}
-                article={article}
-                comments={comments}
-                author={author}
-              />
-            );
-          })}
-          {/* Read more button */}
-          <Button
-            variant="gradient"
-            gradient={{ from: "orange", to: "yellow", deg: 90 }}
-          >
-            More...
-          </Button>
-        </Stack>
-        {/* Right column */}
-        <SidebarHomepage />
-      </TwoColumns>
-    </DefaultLayout>
+    <TwoColumns>
+      {/* Left column */}
+      <Stack>
+        <SectionHeader title={isReviewsPage ? "Reviews" : "News"} />
+        {/* Article's stack, mapper */}
+        {articles.map((article) => {
+          const author = useAuthor(article.authorId);
+          const comments = useComments(article.id);
+          return (
+            <ArticleCard
+              key={article.id}
+              article={article}
+              comments={comments}
+              author={author}
+            />
+          );
+        })}
+        {/* Read more button */}
+        <Button
+          variant="gradient"
+          gradient={{ from: "orange", to: "yellow", deg: 90 }}
+        >
+          More...
+        </Button>
+      </Stack>
+      {/* Right column */}
+      <SidebarHomepage />
+    </TwoColumns>
   );
 };
 
