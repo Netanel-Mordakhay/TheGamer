@@ -7,7 +7,10 @@ const LatestReviews = () => {
   const latestReviews = reviews.slice(-5).reverse();
 
   return latestReviews.map((reviewArticle) => (
-    <Link to={`/review/${reviewArticle.id}`} style={{ textDecoration: "none" }}>
+    <Link
+      to={`/reviews/${reviewArticle.id}`}
+      style={{ textDecoration: "none" }}
+    >
       <LatestReviewCard
         key={reviewArticle.id}
         title={reviewArticle.title}

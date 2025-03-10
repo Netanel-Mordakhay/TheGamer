@@ -13,11 +13,12 @@ import { useState } from "react";
 import { EmblaCarouselType } from "embla-carousel";
 import useArticles from "../../hooks/useArticles";
 import classes from "../../styles/TopCarousel.module.css";
+import { Link } from "react-router-dom";
 
 const TopCarousel = () => {
   const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
   const { featured } = useArticles();
-  const latestFeaturedReviews = featured.slice(-5).reverse();
+  const latestFeatured = featured.slice(-5).reverse();
 
   const handleThumbnailClick = (index: number) => {
     if (embla) {
@@ -29,7 +30,7 @@ const TopCarousel = () => {
     <Group justify="center" wrap="nowrap" bg="black" p={20} mt={-16} mx={-16}>
       {/* Thumbnails */}
       <Stack align="stretch" justify="space-between" gap="xs" h={450}>
-        {latestFeaturedReviews.map((featuredArticle, index) => (
+        {latestFeatured.map((featuredArticle, index) => (
           <Image
             className={classes.thumbnail}
             key={featuredArticle.id}
@@ -53,36 +54,43 @@ const TopCarousel = () => {
         getEmblaApi={setEmbla}
         w="100%"
       >
-        {latestFeaturedReviews.map((featuredArticle) => (
+        {latestFeatured.map((featuredArticle) => (
           <Carousel.Slide key={featuredArticle.id}>
-            <Box className={classes.featuredArticle}>
-              <BackgroundImage
-                src={featuredArticle.imageURL}
-                h={450}
-                style={{
-                  borderTopRightRadius: "20px",
-                  borderBottomRightRadius: "20px",
-                  borderTopLeftRadius: "0",
-                  borderBottomLeftRadius: "0",
-                  overflow: "hidden",
-                }}
-              >
-                <Box className={classes.textBox}>
-                  <div>
-                    <Title>{featuredArticle.title}</Title>
-                    <Text>{featuredArticle.description}</Text>
-                  </div>
-                  <Button
-                    variant="gradient"
-                    gradient={{ from: "orange", to: "yellow", deg: 90 }}
-                    maw={150}
-                    radius="lg"
-                  >
-                    Read more
-                  </Button>
-                </Box>
-              </BackgroundImage>
-            </Box>
+            <Link
+              to={`${featuredArticle.review ? "reviews" : "articles"}/${
+                featuredArticle.id
+              }`}
+              style={{ textDecoration: "none" }}
+            >
+              <Box className={classes.featuredArticle}>
+                <BackgroundImage
+                  src={featuredArticle.imageURL}
+                  h={450}
+                  style={{
+                    borderTopRightRadius: "20px",
+                    borderBottomRightRadius: "20px",
+                    borderTopLeftRadius: "0",
+                    borderBottomLeftRadius: "0",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Box className={classes.textBox}>
+                    <div>
+                      <Title>{featuredArticle.title}</Title>
+                      <Text>{featuredArticle.description}</Text>
+                    </div>
+                    <Button
+                      variant="gradient"
+                      gradient={{ from: "orange", to: "yellow", deg: 90 }}
+                      maw={150}
+                      radius="lg"
+                    >
+                      Read more
+                    </Button>
+                  </Box>
+                </BackgroundImage>
+              </Box>
+            </Link>
           </Carousel.Slide>
         ))}
       </Carousel>
