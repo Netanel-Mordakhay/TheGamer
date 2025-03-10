@@ -79,12 +79,7 @@ const TopCarousel = () => {
                       <Title>{featuredArticle.title}</Title>
                       <Text>{featuredArticle.description}</Text>
                     </div>
-                    <Button
-                      variant="gradient"
-                      gradient={{ from: "orange", to: "yellow", deg: 90 }}
-                      maw={150}
-                      radius="lg"
-                    >
+                    <Button maw={150} radius="xs">
                       Read more
                     </Button>
                   </Box>

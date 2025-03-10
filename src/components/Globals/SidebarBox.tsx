@@ -16,12 +16,7 @@ const SidebarDarkBox = ({ title, buttonText, children, dark }: Props) => {
       <SectionHeader title={title} />
       <Space h="md" />
       {children}
-      <Button
-        mt={10}
-        fullWidth
-        variant="gradient"
-        gradient={{ from: "orange", to: "yellow", deg: 90 }}
-      >
+      <Button mt={10} radius="xs" fullWidth>
         {buttonText}
       </Button>
     </Box>

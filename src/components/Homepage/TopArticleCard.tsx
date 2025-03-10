@@ -12,7 +12,7 @@ interface Props {
 const TopArticleCard = ({ article, author, comments }: Props) => {
   return (
     <Link to={`/articles/${article.id}`} style={{ textDecoration: "none" }}>
-      <Card shadow="md" className="upscale-container " radius="md" p={0}>
+      <Card shadow="md" className="upscale-container " radius="xs" p={0}>
         <Box
           className="upscale-image"
           style={{ backgroundImage: `url(${article.imageURL})` }}

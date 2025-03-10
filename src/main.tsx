@@ -7,7 +7,7 @@ import "@mantine/core/styles.css";
 import "../src/styles/index.css";
 
 const theme = createTheme({
-  primaryColor: "orange",
+  primaryColor: "gray",
 });
 
 createRoot(document.getElementById("root")!).render(

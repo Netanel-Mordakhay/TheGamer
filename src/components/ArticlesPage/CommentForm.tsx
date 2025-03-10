@@ -12,12 +12,7 @@ const CommentForm = () => {
           minRows={4}
           maxRows={8}
         />
-        <Button
-          variant="gradient"
-          gradient={{ from: "orange", to: "yellow", deg: 90 }}
-        >
-          Submit comment
-        </Button>
+        <Button radius="xs">Submit comment</Button>
       </Stack>
     </Card>
   );

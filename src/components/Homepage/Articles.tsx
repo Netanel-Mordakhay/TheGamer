@@ -25,12 +25,7 @@ const Articles = () => {
         );
       })}
       {/* Read more button */}
-      <Button
-        variant="gradient"
-        gradient={{ from: "orange", to: "yellow", deg: 90 }}
-      >
-        More...
-      </Button>
+      <Button>More...</Button>
     </Stack>
   );
 };
