@@ -1,5 +1,6 @@
 import useArticles from "../../hooks/useArticles";
 import useAuthor from "../../hooks/useAuthors";
+import useComments from "../../hooks/useComments";
 import { Button, Stack } from "@mantine/core";
 import ArticleCard from "./ArticleCard";
 import SectionHeader from "../Globals/SectionHeader";
@@ -13,6 +14,7 @@ const Articles = () => {
       {/* Article's stack, mapper */}
       {news.map((article) => {
         const author = useAuthor(article.authorId);
+        const comments = useComments(article.id);
         return (
           <ArticleCard
             title={article.title}
@@ -20,6 +22,7 @@ const Articles = () => {
             author={author?.name}
             imageURL={article.imageURL}
             id={article.id}
+            comments={comments}
           />
         );
       })}

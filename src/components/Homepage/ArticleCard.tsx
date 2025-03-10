@@ -1,6 +1,7 @@
 import { Box, Card, Group, Image, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { Link } from "react-router-dom";
+import type { Comment } from "../../mock/mockData";
 
 interface Props {
   title: string;
@@ -8,9 +9,17 @@ interface Props {
   author: string | undefined;
   imageURL: string;
   id: number;
+  comments: Comment[];
 }
 
-const ArticleCard = ({ title, description, author, imageURL, id }: Props) => {
+const ArticleCard = ({
+  title,
+  description,
+  author,
+  imageURL,
+  id,
+  comments,
+}: Props) => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
@@ -41,7 +50,7 @@ const ArticleCard = ({ title, description, author, imageURL, id }: Props) => {
                   •
                 </Text>
                 <Text size="xs" c="dimmed">
-                  3 Comments
+                  {comments.length} Comments
                 </Text>
               </Group>
             </Box>
@@ -71,7 +80,7 @@ const ArticleCard = ({ title, description, author, imageURL, id }: Props) => {
                   •
                 </Text>
                 <Text size="xs" c="dimmed">
-                  3 Comments
+                  {comments.length} Comments
                 </Text>
               </Group>
             </Stack>

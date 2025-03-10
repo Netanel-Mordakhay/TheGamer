@@ -75,21 +75,21 @@ const authors = [
 const comments = [
   {
     id: 1,
-    articleId: 1,
+    articleId: 18,
     user: "Gamer123",
     text: "This review is spot on!",
     timestamp: "2025-03-06T12:00:00Z",
   },
   {
     id: 2,
-    articleId: 2,
+    articleId: 18,
     user: "NoobSlayer99",
     text: "I disagree with this take.",
     timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 3,
-    articleId: 3,
+    articleId: 18,
     user: "EsportsFan",
     text: "Great insights into the new update!",
     timestamp: "2025-03-06T14:15:00Z",
