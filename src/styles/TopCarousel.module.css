@@ -11,6 +11,12 @@
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .textBox {
+    width: 80%;
+  }
+}
+
 .textBox::after {
   position: absolute;
   width: 100%;

@@ -29,7 +29,13 @@ const TopCarousel = () => {
   return (
     <Group justify="center" wrap="nowrap" bg="black" p={20} mt={-16} mx={-16}>
       {/* Thumbnails */}
-      <Stack align="stretch" justify="space-between" gap="xs" h={450}>
+      <Stack
+        align="stretch"
+        justify="space-between"
+        gap="xs"
+        h={450}
+        visibleFrom="md"
+      >
         {latestFeatured.map((featuredArticle, index) => (
           <Image
             className={classes.thumbnail}
@@ -45,7 +51,7 @@ const TopCarousel = () => {
 
       {/* Carousel's featured articles */}
       <Carousel
-        slideSize="70%"
+        slideSize={{ base: "90%", md: "70%" }}
         height={450}
         align="start"
         slideGap="md"
