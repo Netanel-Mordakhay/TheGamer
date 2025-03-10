@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { AppShell, Burger, Stack } from "@mantine/core";
+import { AppShell, Burger, Group, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
@@ -9,10 +9,15 @@ interface Props {
 }
 
 const DefaultLayout = ({ children }: Props) => {
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle, close }] = useDisclosure();
+
+  const handleLinkClick = () => {
+    close();
+  };
 
   return (
     <AppShell
+      header={{ height: { base: 34, lg: 0 } }}
       navbar={{
         width: 300,
         breakpoint: "lg",
@@ -20,14 +25,24 @@ const DefaultLayout = ({ children }: Props) => {
       }}
       padding="md"
     >
+      <AppShell.Header>
+        <Group bg="black">
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            hiddenFrom="lg"
+            size="md"
+            color="white"
+          />
+        </Group>
+      </AppShell.Header>
+
       <AppShell.Navbar>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <NavBar />
+        <NavBar onLinkClick={handleLinkClick} />
       </AppShell.Navbar>
 
       <AppShell.Main>
         <Stack>
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
           {children} <Footer />
         </Stack>
       </AppShell.Main>

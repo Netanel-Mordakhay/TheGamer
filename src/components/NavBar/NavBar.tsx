@@ -12,6 +12,10 @@ import classes from "../../styles/NavBar.module.css";
 import logo from "../../assets/logo.png";
 import SearchField from "./SearchField";
 
+interface Props {
+  onLinkClick?: () => void;
+}
+
 const data = [
   { link: "/", label: "Homepage", icon: IconHome },
   { link: "/forums", label: "Forums", icon: IconUsers },
@@ -21,7 +25,7 @@ const data = [
   { link: "/shop", label: "Shop", icon: IconShoppingCart },
 ];
 
-const NavBar = () => {
+const NavBar = ({ onLinkClick }: Props) => {
   const location = useLocation();
 
   const links = data.map((item) => (
@@ -30,6 +34,7 @@ const NavBar = () => {
       className={classes.link}
       data-active={location.pathname === item.link || undefined}
       key={item.label}
+      onClick={onLinkClick}
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
