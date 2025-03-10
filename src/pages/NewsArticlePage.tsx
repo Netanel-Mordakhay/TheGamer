@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useArticles from "../hooks/useArticles";
+import useComments from "../hooks/useComments";
 import { Stack, Box, Divider } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
 import SidebarHomepage from "../components/Homepage/SidebarHomepage";
@@ -15,6 +16,11 @@ const NewsArticlePage = () => {
   if (!article) {
     return <p>Article not found</p>;
   }
+
+  {
+    /* Get the relavent comment's list */
+  }
+  const comments = useComments(article.id);
 
   return (
     <DefaultLayout>
@@ -61,7 +67,7 @@ const NewsArticlePage = () => {
               quis provident vero quibusdam repellat magni nostrum.
             </p>
           </Box>
-          <CommentSection />
+          <CommentSection comments={comments} />
         </Stack>
         {/* Right column */}
         <SidebarHomepage />

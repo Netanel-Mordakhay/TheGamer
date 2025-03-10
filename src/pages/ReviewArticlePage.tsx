@@ -1,21 +1,13 @@
 import { useParams } from "react-router-dom";
 import useArticles from "../hooks/useArticles";
-import {
-  Title,
-  Text,
-  Image,
-  Stack,
-  Box,
-  Divider,
-  Group,
-  Space,
-} from "@mantine/core";
+import { Stack, Box, Divider, Group } from "@mantine/core";
 import DefaultLayout from "../layouts/DefaultLayout";
 import OneColumn from "../layouts/OneColumn";
 import ReviewHeader from "../components/ArticlesPage/ReviewHeader";
 import ReviewSummary from "../components/ArticlesPage/ReviewSummary";
 import ReviewShare from "../components/ArticlesPage/ReviewShare";
 import CommentSection from "../components/ArticlesPage/CommentSection";
+import useComments from "../hooks/useComments";
 
 const ReviewArticlePage = () => {
   const { id } = useParams();
@@ -25,6 +17,11 @@ const ReviewArticlePage = () => {
   if (!review) {
     return <p>Review not found</p>;
   }
+
+  {
+    /* Get the relavent comment's list */
+  }
+  const comments = useComments(review.id);
 
   return (
     <DefaultLayout>
@@ -91,7 +88,7 @@ const ReviewArticlePage = () => {
               rating={review.rating}
             ></ReviewSummary>
 
-            <CommentSection />
+            <CommentSection comments={comments} />
           </Stack>
         </Stack>
       </OneColumn>
