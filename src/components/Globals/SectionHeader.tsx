@@ -24,15 +24,3 @@ const SectionHeader = ({ title }: Props) => {
 };
 
 export default SectionHeader;
-
-/*
-<Text
-        size="md"
-        fw={600}
-        c="white"
-        bg="orange"
-        style={{
-          width: "fit-content",
-        }}
-      >
-        */
