@@ -34,6 +34,7 @@ export interface Article {
   featured: boolean;
   topArticle: boolean;
   authorId: number;
+  timestamp: string;
 }
 
 export interface Comment {
@@ -213,6 +214,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 2,
@@ -224,6 +226,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 3,
@@ -235,6 +238,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 4,
@@ -246,6 +250,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 5,
@@ -257,6 +262,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
 
   // Featured Articles (5)
@@ -270,6 +276,7 @@ const articles: Article[] = [
     featured: true,
     topArticle: false,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 7,
@@ -281,6 +288,7 @@ const articles: Article[] = [
     featured: true,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 8,
@@ -292,6 +300,7 @@ const articles: Article[] = [
     featured: true,
     topArticle: false,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 9,
@@ -303,6 +312,7 @@ const articles: Article[] = [
     featured: true,
     topArticle: false,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 10,
@@ -314,6 +324,7 @@ const articles: Article[] = [
     featured: true,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
 
   // Top Articles (5)
@@ -327,6 +338,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: true,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 12,
@@ -338,6 +350,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: true,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 13,
@@ -349,6 +362,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: true,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 14,
@@ -360,6 +374,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: true,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 15,
@@ -371,6 +386,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: true,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
 
   // Regular Articles (5)
@@ -384,6 +400,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 17,
@@ -395,6 +412,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 18,
@@ -406,6 +424,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 19,
@@ -417,6 +436,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 20,
@@ -428,6 +448,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 21,
@@ -440,6 +461,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 22,
@@ -452,6 +474,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 23,
@@ -464,6 +487,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 3,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 24,
@@ -476,6 +500,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 2,
+    timestamp: "2025-03-06T13:30:00Z",
   },
   {
     id: 25,
@@ -488,6 +513,7 @@ const articles: Article[] = [
     featured: false,
     topArticle: false,
     authorId: 1,
+    timestamp: "2025-03-06T13:30:00Z",
   },
 ];
 

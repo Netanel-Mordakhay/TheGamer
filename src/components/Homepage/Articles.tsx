@@ -17,12 +17,10 @@ const Articles = () => {
         const comments = useComments(article.id);
         return (
           <ArticleCard
-            title={article.title}
-            description={article.description}
-            author={author?.name}
-            imageURL={article.imageURL}
-            id={article.id}
+            key={article.id}
+            article={article}
             comments={comments}
+            author={author}
           />
         );
       })}

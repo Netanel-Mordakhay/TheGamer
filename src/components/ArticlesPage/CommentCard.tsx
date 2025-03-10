@@ -13,7 +13,7 @@ const CommentCard = ({ comment }: Props) => {
         <Stack mt={20} gap={15}>
           <Group>
             <Text>{comment.user}</Text>
-            <Text> {new Date(comment.timestamp).toLocaleDateString()}</Text>
+            <Text>{new Date(comment.timestamp).toLocaleDateString()}</Text>
           </Group>
           <Text>{comment.text}</Text>
         </Stack>
