@@ -10,10 +10,10 @@ const NotFoundPage = () => {
         <Image src={image404} w={300} radius="xl" />
         <Title ta="center">404 - Page Not Found</Title>
         <Text ta="center">
-          Dear adventurer, it seems like this page does not exists.
+          Dear adventurer, it seems like this page does not exist.
         </Text>
         <Button component={Link} to="/">
-          Take me back
+          Take me back home.
         </Button>
       </Stack>
     </OneColumn>

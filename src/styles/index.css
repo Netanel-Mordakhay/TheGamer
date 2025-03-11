@@ -167,3 +167,9 @@ body {
   color: white;
   padding: 16px;
 }
+
+@media (max-width: 1600px) {
+  .sideBanner {
+    display: none;
+  }
+}
