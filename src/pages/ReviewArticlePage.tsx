@@ -30,7 +30,7 @@ const ReviewArticlePage = () => {
           imageURL={review.imageURL}
           description={review.description}
         />
-        <Stack px={100}>
+        <Stack px={{ base: 0, md: 100 }}>
           <Group wrap="nowrap" align="flex-start">
             <ReviewShare />
             <Box>
@@ -84,7 +84,6 @@ const ReviewArticlePage = () => {
             imageURL={review.imageURL}
             rating={review.rating}
           ></ReviewSummary>
-
           <CommentSection comments={comments} />
         </Stack>
       </Stack>

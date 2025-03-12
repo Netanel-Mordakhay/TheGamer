@@ -8,7 +8,9 @@ import {
   Text,
   ThemeIcon,
   Title,
+  useMantineTheme,
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { IconProgressCheck, IconProgressX } from "@tabler/icons-react";
 
 interface Props {
@@ -17,6 +19,9 @@ interface Props {
 }
 
 const ReviewSummary = ({ imageURL, rating }: Props) => {
+  const theme = useMantineTheme();
+  const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
+
   return (
     <Box mih={300} className="text-gray">
       <BackgroundImage
@@ -33,7 +38,8 @@ const ReviewSummary = ({ imageURL, rating }: Props) => {
           fw={500}
           p={20}
           gap={30}
-          wrap="nowrap"
+          //wrap="nowrap"
+          wrap={isLargeScreen ? "nowrap" : "wrap"}
         >
           {/* Rating ring */}
           <RingProgress

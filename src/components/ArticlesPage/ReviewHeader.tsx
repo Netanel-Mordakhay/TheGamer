@@ -32,11 +32,10 @@ const ReviewHeader = ({ title, imageURL, description }: Props) => {
           style={{ borderRadius: "16px" }}
         >
           <Title>{title}</Title>
-          <Group className="medium-opacity" mt={10}>
+          <Group className="medium-opacity" mt={10} px={20}>
             <Text>Netanel Mordakhay</Text>
             <Text>•</Text>
             <Text>Published: 06/02/2025</Text>
-            <Text>•</Text>
             <Text>Release Date: 16/05/2025</Text>
             <Text>•</Text>
             <Text>PC, PS4, PS5, Xbox One, Xbox Series</Text>
@@ -44,7 +43,7 @@ const ReviewHeader = ({ title, imageURL, description }: Props) => {
         </Stack>
       </Center>
       <Center>
-        <Title size="xl" my={10}>
+        <Title size="xl" m={10}>
           {description}
         </Title>
       </Center>
