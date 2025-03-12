@@ -54,7 +54,7 @@ const TopCarousel = () => {
 
       {/* Carousel's featured articles */}
       <Carousel
-        slideSize={{ base: "90%", md: "70%" }}
+        slideSize={{ base: "90%", md: "60%" }}
         height={450}
         align="start"
         slideGap="md"

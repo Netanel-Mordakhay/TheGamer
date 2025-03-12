@@ -37,7 +37,7 @@ const DefaultLayout = ({ children }: Props) => {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Navbar>
+      <AppShell.Navbar className="deafult-navbar">
         <NavBar onLinkClick={handleLinkClick} />
       </AppShell.Navbar>
 
