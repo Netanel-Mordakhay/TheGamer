@@ -31,12 +31,22 @@ body {
 /* Cards */
 /* Article Cards */
 .article-card {
-  background-color: var(--mantine-color-body);
-  transition: border-color 0.3s ease-in-out;
+  border: 0px;
+}
+.article-card-title {
+  transition: color 0.3s ease-in-out;
 }
 
-.article-card:hover {
-  border-color: var(--mantine-primary-color-filled-hover);
+.article-card:hover .article-card-title {
+  color: var(--mantine-color-gray-7);
+}
+
+.article-card-image {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.article-card:hover .article-card-image {
+  opacity: 0.9;
 }
 
 /* Hot Atricle Cards */
@@ -66,10 +76,11 @@ body {
 
 .gameReviewBox {
   color: var(--mantine-color-dark-1);
+  transition: color 0.3s ease-in-out;
 }
 
 .gameReviewBox:hover {
-  color: var(--mantine-color-dark-0);
+  color: var(--mantine-color-dark-2);
 }
 
 /* Decorations */

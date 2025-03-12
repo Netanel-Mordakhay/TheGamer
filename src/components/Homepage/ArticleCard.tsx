@@ -17,7 +17,7 @@ const ArticleCard = ({ article, comments, author }: Props) => {
       to={`/${article.review ? "reviews" : "articles"}/${article.id}`}
       style={{ textDecoration: "none" }}
     >
-      <Card withBorder radius="xs" p={0} className="article-card">
+      <Card radius="xs" p={0}>
         {isSmallScreen ? (
           <Stack gap="sm">
             <Image src={article.imageURL} mah={200} />
@@ -49,14 +49,18 @@ const ArticleCard = ({ article, comments, author }: Props) => {
             </Box>
           </Stack>
         ) : (
-          <Group wrap="nowrap" gap={15}>
-            <Image src={article.imageURL} h={170} />
+          <Group wrap="nowrap" gap={15} className="article-card">
+            <Image
+              src={article.imageURL}
+              h={170}
+              className="article-card-image"
+            />
             <Stack gap={0} justify="space-between" mih={130}>
               <div>
                 <Text tt="uppercase" c="dimmed" fw={700} size="xs">
                   - news
                 </Text>
-                <Text size="xl" fw={700}>
+                <Text size="xl" fw={700} className="article-card-title">
                   {article.title}
                 </Text>
                 <Text lineClamp={2}>{article.description}</Text>

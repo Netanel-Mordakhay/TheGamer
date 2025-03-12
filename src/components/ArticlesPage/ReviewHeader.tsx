@@ -7,6 +7,7 @@ import {
   Text,
   Center,
 } from "@mantine/core";
+import PlatformIcon from "../Globals/PlatformIcon";
 
 interface Props {
   title: string;
@@ -17,7 +18,7 @@ interface Props {
 const ReviewHeader = ({ title, imageURL, description }: Props) => {
   return (
     <Box mx={-10} mt={-20}>
-      <BackgroundImage src={imageURL} h={600}>
+      <BackgroundImage src={imageURL} h={{ base: 400, md: 600 }}>
         <div className="review-header-image-gradient" />
       </BackgroundImage>
       <Center>
@@ -31,14 +32,26 @@ const ReviewHeader = ({ title, imageURL, description }: Props) => {
           align="center"
           style={{ borderRadius: "16px" }}
         >
-          <Title>{title}</Title>
-          <Group className="medium-opacity" mt={10} px={20}>
+          <Title ta="center">{title}</Title>
+          <Group
+            className="medium-opacity"
+            mt={10}
+            px={20}
+            justify="center"
+            gap={10}
+          >
             <Text>Netanel Mordakhay</Text>
-            <Text>•</Text>
-            <Text>Published: 06/02/2025</Text>
-            <Text>Release Date: 16/05/2025</Text>
-            <Text>•</Text>
-            <Text>PC, PS4, PS5, Xbox One, Xbox Series</Text>
+            <Text>Review Published: 06/02/2025</Text>
+            <Text>Game Release: 16/05/2025</Text>
+            {/* <Text>PC, PS4, PS5, Xbox One, Xbox Series</Text> */}
+          </Group>
+          <Group mt={10} px={20} justify="center">
+            <PlatformIcon platform="pc" />
+            <PlatformIcon platform="ps4" />
+            <PlatformIcon platform="ps5" />
+            <PlatformIcon platform="xboxone" />
+            <PlatformIcon platform="xboxseries" />
+            <PlatformIcon platform="nswitch" />
           </Group>
         </Stack>
       </Center>

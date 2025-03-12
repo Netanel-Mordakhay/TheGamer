@@ -17,7 +17,7 @@ interface Props {
 const ArticleHeader = ({ title, imageURL, description }: Props) => {
   return (
     <Box>
-      <BackgroundImage src={imageURL} h={420}>
+      <BackgroundImage src={imageURL} h={{ base: 350, md: 420 }}>
         <div className="article-header-image-gradient">
           <Stack
             p={10}
