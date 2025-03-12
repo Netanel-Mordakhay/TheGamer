@@ -10,7 +10,12 @@
   position: relative;
   width: 30%;
   height: 100%;
-  background-color: rgba(30, 30, 30, 0.5);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   color: var(--mantine-color-white);
   padding: 20px;
   display: flex;
