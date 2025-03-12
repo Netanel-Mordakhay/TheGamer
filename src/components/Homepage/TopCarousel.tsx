@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mantine/hooks";
 
 const TopCarousel = () => {
-  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  const isSmallScreen = useMediaQuery("(max-width: 1407px)");
   const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
   const { featured } = useArticles();
   const latestFeatured = featured.slice(-5).reverse();
@@ -32,18 +32,19 @@ const TopCarousel = () => {
     <Group justify="center" wrap="nowrap" bg="black" p={20} mt={-16} mx={-16}>
       {/* Thumbnails */}
       <Stack
-        align="stretch"
+        align="center"
         justify="space-between"
         gap="xs"
         h={450}
-        visibleFrom="md"
+        visibleFrom="xl"
       >
         {latestFeatured.map((featuredArticle, index) => (
           <Image
             className={classes.thumbnail}
             key={featuredArticle.id}
             src={featuredArticle.imageURL}
-            w={120}
+            miw={80}
+            maw={120}
             onClick={() => handleThumbnailClick(index)}
             style={{ cursor: "pointer" }}
             radius="xs"
