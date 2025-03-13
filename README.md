@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# TheGamer - Gaming Magazine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![TheGamer](https://thegamer.naticodes.com/tggh.jpg "TheGamer")
+This project is a front-end web platform designed for a gaming news website, optimized for both desktop and mobile devices. TheGamer provides a seamless experience for gamers to stay updated with the latest news, reviews, and relevant industry insights.
 
-Currently, two official plugins are available:
+## Live demo: [here](https://thegamer.naticodes.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Latest News: Stay updated with breaking news from the gaming industry.
+- Game Reviews: Detailed reviews of the newest and most popular games.
+- Categories & Filtering: Organize and filter articles based on genres, platforms, and more.
+- User-friendly Interface: Built with a clean and modern UI using React and Mantine UI.
+- Mobile & Desktop Friendly: Fully responsive design for an optimal experience on any device.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Prerequisites: Node.js
+  Clone the repository
+
+```
+git clone https://github.com/Netanel-Mordakhay/TheGamer
+cd TheGamer
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+npm install
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Run the development enviorment
+
+```
+npm run dev
+```
+
+## Tech Stack
+
+- Frontend: React, Vite, Mantine UI
+- Routing: React Router
+
+## Project Structure
+
+```
+/src
+├── assets       # Images, icons, and styles
+  ├── components   # Reusable UI components
+  ├── hooks        # Custom React hooks
+  ├── layouts      # Custom React hooks
+  ├── mock         # Dummy data for testing
+  ├── pages        # Main pages (Home, Article, News Page, etc.)
+  ├── styles       # Dummy data for testing
 ```
