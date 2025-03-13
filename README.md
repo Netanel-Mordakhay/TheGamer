@@ -5,6 +5,8 @@ This project is a front-end web platform designed for a gaming news website, opt
 
 ## Live demo: [here](https://thegamer.naticodes.com)
 
+![TheGamer Desktop](https://thegamer.naticodes.com/desk1.png "TheGamer Desktop")
+
 ## Features
 
 - Latest News: Stay updated with breaking news from the gaming industry.
