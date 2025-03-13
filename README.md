@@ -11,7 +11,6 @@ This project is a front-end web platform designed for a gaming news website, opt
 
 - Latest News: Stay updated with breaking news from the gaming industry.
 - Game Reviews: Detailed reviews of the newest and most popular games.
-- Categories & Filtering: Organize and filter articles based on genres, platforms, and more.
 - User-friendly Interface: Built with a clean and modern UI using React and Mantine UI.
 - Mobile & Desktop Friendly: Fully responsive design for an optimal experience on any device.
 
